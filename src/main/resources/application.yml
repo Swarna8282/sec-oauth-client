@@ -1,0 +1,21 @@
+---
+server:
+  port: 8881
+  servlet:
+    context-path: /ui
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: MyClientId
+      clientSecret: secret
+      accessTokenUri: http://localhost:8880/auth/oauth/token
+      userAuthorizationUri: http://localhost:8880/auth/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8880/auth/userinfo
+
+spring:
+  thymeleaf:
+    cache: false
